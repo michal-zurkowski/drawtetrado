@@ -1,0 +1,5 @@
+__pycache__/
+build/
+optimizer.cpp
+optimizer.*.so
+text_width.svg
