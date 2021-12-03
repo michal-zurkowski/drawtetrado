@@ -259,26 +259,6 @@ class Quadruplex:
                                     self.GetSameRotations(),
                                     self.GetAlignments())
 
-
-        # TODO
-        # First variable as number of nucleotides
-        #input_data = str(len(self.nucl_quad)) + " "
-        #print("input: {0}".format(input_data))
-
-        # Followed by connections of nucleotides.
-        #input_data += self.GetNucleotidesPositions() + " "
-        #print("input: {0}".format(input_data))
-
-        # Followed by which levels should be rotated the same way.
-        #input_data += self.GetSameRotations()
-
-        #print("input: {0}".format(input_data))
-        #output = subprocess.run([optimizer], \
-        #        universal_newlines = True, stdout = subprocess.PIPE, \
-        #        input = input_data, encoding = "ascii")
-        #optimized = list(output.stdout.split(" "))
-        #print("Optimized positions: {0}".format(optimized))
-
         # Update position for nucleotide.
         for _, nucl in self.nucl_quad.items():
             pos = nucl.position + nucl.tetrade_no * 4
