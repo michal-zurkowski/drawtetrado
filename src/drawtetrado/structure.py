@@ -1,9 +1,9 @@
 import json
-from svg_painter import Point, ConnType, ConnFlow
 import sys
 import math
 import subprocess
 
+from drawtetrado.svg_painter import Point, ConnType, ConnFlow
 
 class Nucleotide:
     def FindConnections(self, used):
@@ -255,12 +255,12 @@ class Quadruplex:
     # Use C++ code to rotate tetrads for more readable output.
     def Optimize(self, optimizer = "./svg_optimizer"):
         import optimizer
-        breakpoint()
         optimized = optimizer.solve(self.GetNucleotidesPositions(),
                                     self.GetSameRotations(),
                                     self.GetAlignments())
 
 
+        # TODO
         # First variable as number of nucleotides
         #input_data = str(len(self.nucl_quad)) + " "
         #print("input: {0}".format(input_data))

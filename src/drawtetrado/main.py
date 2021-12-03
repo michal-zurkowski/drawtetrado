@@ -1,5 +1,6 @@
-import structure
-import svg_painter
+import drawtetrado.structure as structure
+import drawtetrado.svg_painter as svg_painter
+
 import math
 import svgwrite
 import os
@@ -49,8 +50,9 @@ def DrawFromString(json, output_file):
 def DrawFromFile(filename_json, output_file):
     Draw(structure.Structure().fromFile(filename_json), output_file)
 
-if len(sys.argv) != 3:
-    print("Please provide 2 arguments. ./main.py <input_json> <output_svg>")
-    exit()
+def main():
+    if len(sys.argv) != 3:
+        print("Please provide 2 arguments. ./main.py <input_json> <output_svg>")
+        exit()
 
-DrawFromFile(sys.argv[1], sys.argv[2])
+    DrawFromFile(sys.argv[1], sys.argv[2])
