@@ -8,11 +8,11 @@
 #define INF 2e9
 
 // Logical
-using Level = int8_t; // 0 - num_levels
-using Index = int8_t; // 0/1/2/3
-using ID = int8_t;    // Level * 4 + Index;
+using Level = int32_t; // 0 - num_levels
+using Index = int32_t; // 0/1/2/3
+using ID = int32_t;    // Level * 4 + Index;
 // Visual
-using Position = int8_t; // 0/1/2/3
+using Position = int32_t; // 0/1/2/3
 
 const std::vector<std::vector<Position>> permutations = {
     {0, 1, 2, 3}, {3, 0, 1, 2}, {2, 3, 0, 1}, {1, 2, 3, 0},
@@ -181,6 +181,22 @@ Solution Solve(const std::vector<ID> &edges,
 
   return best_solution;
 };
+
+Solution SolveFailsafe(const std::vector<ID> &edges,
+                       const std::vector<Level> &rotations,
+                       const std::vector<ID> &alignments) {
+  Solution result = Solve(edges, rotations, alignments);
+
+  // tracts are not possible to be implemented.
+  // Recalculate ignoring tracts.
+  if (result.score == -1) {
+    fprintf(stderr, "Unable to include tracts, ignoring.\n");
+    std::vector<Level> rotations_fixed(edges.size(), -1);
+    result = Solve(edges, rotations_fixed, alignments);
+  }
+
+  return result;
+}
 
 int main() {
   std::vector<ID> edges;

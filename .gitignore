@@ -1,0 +1,7 @@
+__pycache__
+build
+cython/optimizer.cpp
+dist
+drawtetrado.egg-info
+src/drawtetrado.egg-info
+text_width.svg

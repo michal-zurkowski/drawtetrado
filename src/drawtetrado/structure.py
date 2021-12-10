@@ -1,9 +1,9 @@
 import json
-from svg_painter import Point, ConnType, ConnFlow
 import sys
 import math
 import subprocess
 
+from drawtetrado.svg_painter import Point, ConnType, ConnFlow
 
 class Nucleotide:
     def FindConnections(self, used):
@@ -222,19 +222,14 @@ class Quadruplex:
             self.tracts = structure.tracts[quadruplex_id]
 
     def GetNucleotidesPositions(self):
-        lst = [None] * len(self.nucl_quad)
+        lst = [-1] * len(self.nucl_quad)
         for name, nucl in self.nucl_quad.items():
             if nucl.connected_to != "":
               conn_to = self.nucl_quad[nucl.connected_to]
-              lst[nucl.tetrade_no * 4 + nucl.position] = str(conn_to.tetrade_no * 4 + conn_to.position)
+              lst[nucl.tetrade_no * 4 + nucl.position] = conn_to.tetrade_no * 4 + conn_to.position
             else:
-              lst[nucl.tetrade_no * 4 + nucl.position] = "-1"
-        positions = ""
-
-        for nucl in lst:
-            positions = positions + nucl + " "
-
-        return positions
+              lst[nucl.tetrade_no * 4 + nucl.position] = -1
+        return lst
 
     def GetSameRotations(self):
         lst = [-1] * len(self.tetrads)
@@ -245,10 +240,9 @@ class Quadruplex:
                         for nucl_name in names:
                             if name == nucl_name:
                                 lst[idx] = group
-        result = ""
-        for rotation in lst:
-            result += str(rotation) + " "
+        return lst
 
+    def GetAlignments(self):
         lst = [-1] * len(self.nucl_quad)
         for name, nucl in self.nucl_quad.items():
             for group_1, tetrad_tracts in enumerate(self.tracts):
@@ -256,32 +250,14 @@ class Quadruplex:
                     for nucl_name in names:
                         if name == nucl_name:
                             lst[nucl.tetrade_no * 4 + nucl.position] = group_1 * 4 + group_2
-
-        for rotation in lst:
-            result += str(rotation) + " "
-
-        return result
-
+        return lst
 
     # Use C++ code to rotate tetrads for more readable output.
     def Optimize(self, optimizer = "./svg_optimizer"):
-        # First variable as number of nucleotides
-        input_data = str(len(self.nucl_quad)) + " "
-        #print("input: {0}".format(input_data))
-
-        # Followed by connections of nucleotides.
-        input_data += self.GetNucleotidesPositions() + " "
-        #print("input: {0}".format(input_data))
-
-        # Followed by which levels should be rotated the same way.
-        input_data += self.GetSameRotations()
-
-        #print("input: {0}".format(input_data))
-        output = subprocess.run([optimizer], \
-                universal_newlines = True, stdout = subprocess.PIPE, \
-                input = input_data, encoding = "ascii")
-        optimized = list(output.stdout.split(" "))
-        #print("Optimized positions: {0}".format(optimized))
+        import optimizer
+        optimized = optimizer.solve(self.GetNucleotidesPositions(),
+                                    self.GetSameRotations(),
+                                    self.GetAlignments())
 
         # Update position for nucleotide.
         for _, nucl in self.nucl_quad.items():
