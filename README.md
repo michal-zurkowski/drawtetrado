@@ -9,8 +9,8 @@ arrows for an accessible overview of their directionality and visual
 determination of loop types.
 
 DrawTetrado automatically optimizes the layout. The result is a visually
-pleasing and readable image, even for V-loop quadruplexes and G4-helices
-(dimers).
+pleasing and readable image, even for the most complex cases like
+V-loops and G4-helices (dimers).
 
 # Installation
 
@@ -48,6 +48,11 @@ installed, please install DSSR (Lu *et al.*, 2015) and run:
     distinct quadruplexes as there are in the input file)
 
 # Examples
+
+## Human telomere DNA quadruplex
+
+![[2HY9: Human telomere DNA quadruplex structure in K+ solution hybrid-1
+form](https://www.rcsb.org/structure/2hy9)](2hy9.svg)
 
 ## V-loop
 
