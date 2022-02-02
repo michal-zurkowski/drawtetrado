@@ -1,4 +1,7 @@
+Makefile
+README.html
 __pycache__
+assets
 build
 cython/optimizer.cpp
 dist
