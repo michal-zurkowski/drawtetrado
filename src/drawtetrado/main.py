@@ -62,4 +62,4 @@ def main():
     parser.add_argument('output', help='path to output SVG file template')
     args = parser.parse_args()
 
-    DrawFromFile(args['input'], args['output'])
+    DrawFromFile(args.input, args.output)
