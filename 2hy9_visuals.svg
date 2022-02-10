@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg baseProfile="full" height="835px" width="823px" viewBox="0 0 696 740" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="a" markerHeight="6.4" markerUnits="strokeWidth" markerWidth="8" orient="auto" refX="7.6" refY="4.1">
+      <path d="m.8 1.6 6.8 2.5L.8 6.4"/>
+    </marker>
+  </defs>
+  <path d="M 465.59 477.72 C 428.61 687.445 322.57 -107.781 285.59 101.944" fill="none" stroke="#000" stroke-width="3"/>
+  <path d="M 285.59 477.72 C 285.59 549.72 169.888 687.608 169.888 615.608" fill="none" stroke="#000" stroke-width="3"/>
+  <path fill="none" marker-mid="url(#a)" stroke="#000" stroke-width="3" d="M 285.59 289.832 L 285.59 401.776 L 285.59 477.72"/>
+  <path fill="none" marker-mid="url(#a)" stroke="#000" stroke-width="3" d="M 285.59 101.944 L 285.59 213.888 L 285.59 289.832"/>
+  <path fill="#FFCC38" fill-opacity=".85" stroke="#FFCC38" stroke-width="3" d="M 331.311 554.324 L 395.59 477.72 L 465.59 477.72 L 401.311 554.324 Z"/>
+  <path fill="#FF992b" fill-opacity=".85" stroke="#FF992b" stroke-width="3" d="M 240.595 531.343 L 285.59 477.72 L 385.59 477.72 L 340.595 531.343 Z"/>
+  <path fill="#FF992b" fill-opacity=".85" stroke="#FF992b" stroke-width="3" d="M 169.888 615.608 L 234.167 539.004 L 304.167 539.004 L 239.888 615.608 Z"/>
+  <path fill="#FFCC38" fill-opacity=".85" stroke="#FFCC38" stroke-width="3" d="M 249.888 615.608 L 294.883 561.985 L 394.883 561.985 L 349.888 615.608 Z"/>
+  <path fill="#FFCC38" fill-opacity=".85" stroke="#FFCC38" stroke-width="3" d="M 331.311 366.436 L 395.59 289.832 L 465.59 289.832 L 401.311 366.436 Z"/>
+  <path fill="#FFCC38" fill-opacity=".85" stroke="#FFCC38" stroke-width="3" d="M 240.595 343.455 L 285.59 289.832 L 385.59 289.832 L 340.595 343.455 Z"/>
+  <path fill="#FF992b" fill-opacity=".85" stroke="#FF992b" stroke-width="3" d="M 169.888 427.72 L 234.167 351.116 L 304.167 351.116 L 239.888 427.72 Z"/>
+  <path fill="#FFCC38" fill-opacity=".85" stroke="#FFCC38" stroke-width="3" d="M 249.888 427.72 L 294.883 374.097 L 394.883 374.097 L 349.888 427.72 Z"/>
+  <path fill="#FF992b" fill-opacity=".85" stroke="#FF992b" stroke-width="3" d="M 320.595 155.567 L 365.59 101.944 L 465.59 101.944 L 420.595 155.567 Z"/>
+  <path fill="#FF992b" fill-opacity=".85" stroke="#FF992b" stroke-width="3" d="M 279.888 239.832 L 344.167 163.228 L 414.167 163.228 L 349.888 239.832 Z"/>
+  <path fill="#FFCC38" fill-opacity=".85" stroke="#FFCC38" stroke-width="3" d="M 169.888 239.832 L 214.883 186.209 L 314.883 186.209 L 269.888 239.832 Z"/>
+  <path fill="#FF992b" fill-opacity=".85" stroke="#FF992b" stroke-width="3" d="M 221.311 178.548 L 285.59 101.944 L 355.59 101.944 L 291.311 178.548 Z"/>
+  <path fill="none" stroke="#E23D28" stroke-opacity=".95" stroke-width="3" d="M 465.59 477.72 L 349.888 615.608"/>
+  <path fill="none" stroke="#E23D28" stroke-opacity=".95" stroke-width="3" d="M 285.59 477.72 L 465.59 477.72"/>
+  <path fill="none" stroke="#E23D28" stroke-opacity=".95" stroke-width="3" d="M 169.888 615.608 L 285.59 477.72"/>
+  <path fill="none" stroke="#E23D28" stroke-opacity=".95" stroke-width="3" d="M 349.888 615.608 L 169.888 615.608"/>
+  <path fill="none" stroke="#E23D28" stroke-opacity=".95" stroke-width="3" d="M 465.59 289.832 L 349.888 427.72"/>
+  <path fill="none" stroke="#E23D28" stroke-opacity=".95" stroke-width="3" d="M 285.59 289.832 L 465.59 289.832"/>
+  <path fill="none" stroke="#E23D28" stroke-opacity=".95" stroke-width="3" d="M 169.888 427.72 L 285.59 289.832"/>
+  <path fill="none" stroke="#E23D28" stroke-opacity=".95" stroke-width="3" d="M 349.888 427.72 L 169.888 427.72"/>
+  <path fill="none" stroke="#E23D28" stroke-opacity=".95" stroke-width="3" d="M 465.59 101.944 L 349.888 239.832"/>
+  <path fill="none" stroke="#E23D28" stroke-opacity=".95" stroke-width="3" d="M 349.888 239.832 L 169.888 239.832"/>
+  <path fill="none" stroke="#E23D28" stroke-opacity=".95" stroke-width="3" d="M 169.888 239.832 L 285.59 101.944"/>
+  <path fill="none" stroke="#E23D28" stroke-opacity=".95" stroke-width="3" d="M 285.59 101.944 L 465.59 101.944"/>
+  <path fill="none" marker-mid="url(#a)" stroke="#000" stroke-width="3" d="M 169.888 615.608 L 169.888 503.664 L 169.888 427.72"/>
+  <path fill="none" marker-mid="url(#a)" stroke="#000" stroke-width="3" d="M 465.59 289.832 L 465.59 401.776 L 465.59 477.72"/>
+  <path fill="none" marker-mid="url(#a)" stroke="#000" stroke-width="3" d="M 169.888 427.72 L 169.888 315.776 L 169.888 239.832"/>
+  <path fill="none" marker-mid="url(#a)" stroke="#000" stroke-width="3" d="M 349.888 427.72 L 349.888 539.664 L 349.888 615.608"/>
+  <path fill="none" marker-mid="url(#a)" stroke="#000" stroke-width="3" d="M 465.59 101.944 L 465.59 213.888 L 465.59 289.832"/>
+  <path fill="none" marker-mid="url(#a)" stroke="#000" stroke-width="3" d="M 349.888 239.832 L 349.888 351.776 L 349.888 427.72"/>
+  <path d="M 169.888 239.832 C 169.888 167.832 349.888 167.832 349.888 239.832" fill="none" stroke="#000" stroke-width="3"/>
+  <circle cx="465.59" cy="477.72" fill="#fff" opacity=".95" r="6" stroke="#000" stroke-width="2"/>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" stroke="#FFCC38" stroke-linejoin="round" stroke-width="2" style="text-anchor: middle; white-space: pre;" transform="matrix(0.642788, -0.766044, 1.305407, 0, 403.771118, 516.021729)">A.DG6</text>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" style="text-anchor: middle; white-space: pre;" transform="matrix(0.642788, -0.766044, 1.305407, 0, 403.771118, 516.021729)">A.DG6</text>
+  <circle cx="285.59" cy="477.72" fill="#fff" opacity=".95" r="6" stroke="#000" stroke-width="2"/>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" stroke="#FF992b" stroke-linejoin="round" stroke-width="2" style="text-anchor: middle; white-space: pre; font-size: 20px;" transform="matrix(1, 0, -0.8391, 1, 308.412994, 509.85199)">A.DG12</text>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" style="text-anchor: middle; white-space: pre; font-size: 20px;" transform="matrix(1, 0, -0.8391, 1, 308.412994, 509.85199)">A.DG12</text>
+  <circle cx="169.888" cy="615.608" fill="#fff" opacity=".95" r="6" stroke="#000" stroke-width="2"/>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" stroke="#FF992b" stroke-linejoin="round" stroke-width="2" style="text-anchor: middle; white-space: pre;" transform="matrix(0.642788, -0.766044, 1.305407, 0, 242.348236, 577.305237)">A.DG16</text>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" style="text-anchor: middle; white-space: pre;" transform="matrix(0.642788, -0.766044, 1.305407, 0, 242.348236, 577.305237)">A.DG16</text>
+  <circle cx="349.888" cy="615.608" fill="#fff" opacity=".95" r="6" stroke="#000" stroke-width="2"/>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" stroke="#FFCC38" stroke-linejoin="round" stroke-width="2" style="text-anchor: middle; white-space: pre; font-size: 20px;" transform="matrix(1, 0, -0.8391, 1, 317.705994, 594.117004)">A.DG24</text>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" style="text-anchor: middle; white-space: pre; font-size: 20px;" transform="matrix(1, 0, -0.8391, 1, 317.705994, 594.117004)">A.DG24</text>
+  <circle cx="465.59" cy="289.832" fill="#fff" opacity=".95" r="6" stroke="#000" stroke-width="2"/>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" stroke="#FFCC38" stroke-linejoin="round" stroke-width="2" style="text-anchor: middle; white-space: pre;" transform="matrix(0.642788, -0.766044, 1.305407, 0, 403.771332, 328.134186)">A.DG5</text>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" style="text-anchor: middle; white-space: pre;" transform="matrix(0.642788, -0.766044, 1.305407, 0, 403.771332, 328.134186)">A.DG5</text>
+  <circle cx="285.59" cy="289.832" fill="#fff" opacity=".95" r="6" stroke="#000" stroke-width="2"/>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" stroke="#FFCC38" stroke-linejoin="round" stroke-width="2" style="text-anchor: middle; white-space: pre; font-size: 20px;" transform="matrix(1, 0, -0.8391, 1, 308.412994, 321.963989)">A.DG11</text>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" style="text-anchor: middle; white-space: pre; font-size: 20px;" transform="matrix(1, 0, -0.8391, 1, 308.412994, 321.963989)">A.DG11</text>
+  <circle cx="169.888" cy="427.72" fill="#fff" opacity=".95" r="6" stroke="#000" stroke-width="2"/>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" stroke="#FF992b" stroke-linejoin="round" stroke-width="2" style="text-anchor: middle; white-space: pre;" transform="matrix(0.642788, -0.766044, 1.305407, 0, 242.348434, 389.417664)">A.DG17</text>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" style="text-anchor: middle; white-space: pre;" transform="matrix(0.642788, -0.766044, 1.305407, 0, 242.348434, 389.417664)">A.DG17</text>
+  <circle cx="349.888" cy="427.72" fill="#fff" opacity=".95" r="6" stroke="#000" stroke-width="2"/>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" stroke="#FFCC38" stroke-linejoin="round" stroke-width="2" style="text-anchor: middle; white-space: pre; font-size: 20px;" transform="matrix(1, 0, -0.8391, 1, 317.705994, 406.230011)">A.DG23</text>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" style="text-anchor: middle; white-space: pre; font-size: 20px;" transform="matrix(1, 0, -0.8391, 1, 317.705994, 406.230011)">A.DG23</text>
+  <circle cx="465.59" cy="101.944" fill="#fff" opacity=".95" r="6" stroke="#000" stroke-width="2"/>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" stroke="#FF992b" stroke-linejoin="round" stroke-width="2" style="text-anchor: middle; white-space: pre; font-size: 20px;" transform="matrix(1, 0, -0.8391, 1, 388.412994, 134.076004)">A.DG4</text>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" style="text-anchor: middle; white-space: pre; font-size: 20px;" transform="matrix(1, 0, -0.8391, 1, 388.412994, 134.076004)">A.DG4</text>
+  <circle cx="349.888" cy="239.832" fill="#fff" opacity=".95" r="6" stroke="#000" stroke-width="2"/>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" stroke="#FF992b" stroke-linejoin="round" stroke-width="2" style="text-anchor: middle; white-space: pre;" transform="matrix(0.642788, -0.766044, 1.305407, 0, 352.348389, 201.529327)">A.DG22</text>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" style="text-anchor: middle; white-space: pre;" transform="matrix(0.642788, -0.766044, 1.305407, 0, 352.348389, 201.529327)">A.DG22</text>
+  <circle cx="169.888" cy="239.832" fill="#fff" opacity=".95" r="6" stroke="#000" stroke-width="2"/>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" stroke="#FFCC38" stroke-linejoin="round" stroke-width="2" style="text-anchor: middle; white-space: pre; font-size: 20px;" transform="matrix(1, 0, -0.8391, 1, 237.705994, 218.341003)">A.DG18</text>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" style="text-anchor: middle; white-space: pre; font-size: 20px;" transform="matrix(1, 0, -0.8391, 1, 237.705994, 218.341003)">A.DG18</text>
+  <circle cx="285.59" cy="101.944" fill="#fff" opacity=".95" r="6" stroke="#000" stroke-width="2"/>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" stroke="#FF992b" stroke-linejoin="round" stroke-width="2" style="text-anchor: middle; white-space: pre;" transform="matrix(0.642788, -0.766044, 1.305407, 0, 293.771088, 140.245911)">A.DG10</text>
+  <text font-family="Arial, Helvetica" font-size="20" font-weight="bold" style="text-anchor: middle; white-space: pre;" transform="matrix(0.642788, -0.766044, 1.305407, 0, 293.771088, 140.245911)">A.DG10</text>
+  <text font-family="Arial, Helvetica" font-size="24" font-weight="bold" stroke="#fff" stroke-linejoin="round" stroke-width="2" style="white-space: pre; font-size: 24px;" x="485.59" y="106.744">5'</text>
+  <text font-family="Arial, Helvetica" font-size="24" font-weight="bold" style="white-space: pre; font-size: 24px;" x="485.59" y="106.744">5'</text>
+  <text font-family="Arial, Helvetica" font-size="24" font-weight="bold" stroke="#fff" stroke-linejoin="round" stroke-width="2" style="white-space: pre; font-size: 24px;" x="369.888" y="620.408">3'</text>
+  <text font-family="Arial, Helvetica" font-size="24" font-weight="bold" style="white-space: pre; font-size: 24px;" x="369.888" y="620.408">3'</text>
+  <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-width: 2px; stroke-miterlimit: 1; stroke-dashoffset: -28px;" x1="174.076" y1="213.882" x2="114.089" y2="183.388" transform="matrix(-1, 0, 0, -1, 288.165001, 397.270004)"/>
+  <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-dashoffset: -1px; stroke-miterlimit: 0; stroke-width: 2px;" x1="228.958" y1="166.501" x2="128.355" y2="169.43" transform="matrix(-1, 0, 0, -1, 357.312988, 335.931)"/>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="38.958" y="177.136">--line-width</text>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 17.4px;" x="360.304" y="34.483"> </text>
+  <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-width: 2px; stroke-miterlimit: 1; stroke-dashoffset: -28px;" x1="542.334" y1="300.84" x2="440.273" y2="300.839"/>
+  <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-width: 2px; stroke-miterlimit: 1; stroke-dashoffset: -28px;" x1="542.646" y1="117.253" x2="439.34" y2="117.252"/>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="549.036" y="122.298">--color-gb-syn</text>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="548.169" y="306.507">--color-gb-anti</text>
+  <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-width: 2px; stroke-miterlimit: 1; stroke-dashoffset: -28px;" x1="542.646" y1="162.066" x2="415.069" y2="161.443"/>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="548.498" y="167.728">--color-border</text>
+  <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-dashoffset: -1px; stroke-miterlimit: 0; stroke-width: 2px;" x1="208.145" y1="697.884" x2="207.523" y2="638.763"/>
+  <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-dashoffset: -1px; stroke-miterlimit: 0; stroke-width: 2px;" x1="332.765" y1="698.573" x2="300.404" y2="641.319"/>
+  <polyline style="fill: none; stroke: rgb(0, 0, 0);" points="249.538 621.96 248.908 641.855 349.095 642.497 349.724 623.244"/>
+  <polyline style="fill: none; stroke: rgb(0, 0, 0);" points="276.29 478.825 267.578 478.825 266.955 429.661 276.912 429.661"/>
+  <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-dashoffset: -1px; stroke-miterlimit: 0; stroke-width: 2px;" x1="265.398" y1="453.621" x2="136.577" y2="452.998" transform="matrix(-1, 0, 0, -1, 401.975006, 906.618988)"/>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="6.745" y="456.732">--tetrad-spacing</text>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="283.107" y="718.631">--nucl-longer</text>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="157.539" y="719.519">--nucl-shorter</text>
+  <polyline style="fill: none; stroke: rgb(0, 0, 0);" points="172.533 621.457 172.101 641.352 240.747 641.994 241.178 622.741"/>
+  <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-width: 2px; stroke-miterlimit: 1; stroke-dashoffset: -28px;" x1="489.487" y1="558.468" x2="387.426" y2="558.467"/>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="494.595" y="563.134">--nucl-spacing</text>
+  <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-width: 2px; stroke-miterlimit: 1; stroke-dashoffset: -28px;" x1="539.273" y1="237.551" x2="464.594" y2="238.173"/>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="546.399" y="242.598">--color-connection</text>
+</svg>
