@@ -537,9 +537,11 @@ class Structure:
             tetrad_unordered = {}
             tracts_all = []
             for _, quadruplex in enumerate(helice["quadruplexes"]):
+                tetrad_unordered_local = {}
                 for data in quadruplex["tetrads"]:
                     tetrad_unordered[data["id"]] = data
-                single_tetrads_local.append(tetrad_unordered)
+                    tetrad_unordered_local[data["id"]] = data
+                single_tetrads_local.append(tetrad_unordered_local)
                 if "tracts" in quadruplex:
                     tracts_all.append(quadruplex["tracts"])
                 else:
