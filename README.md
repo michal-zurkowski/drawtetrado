@@ -155,26 +155,26 @@ A      - --no-label-number --no-label-nucleotide
 
 ```
 
-![Visual changes](https://github.com/michal-zurkowski/drawtetrado/blob/main/2hy9_visuals.svg)
+![Visual changes](https://github.com/michal-zurkowski/drawtetrado/blob/main/2hy9_visuals.svg?raw=true)
 
 # Examples
 
 ## Human telomere DNA quadruplex
 
 ![[2HY9: Human telomere DNA quadruplex structure in K+ solution hybrid-1
-form](https://www.rcsb.org/structure/2hy9)](https://github.com/michal-zurkowski/drawtetrado/blob/main/2hy9.svg)
+form](https://www.rcsb.org/structure/2hy9)](https://github.com/michal-zurkowski/drawtetrado/blob/main/2hy9.svg?raw=true)
 
 ## V-loop
 
 ![[6TCG: 2’-F-riboguanosine and 2’-F-arabinoguanosine modified
 G-quadruplex with V-loop and all-syn
-G-tract](https://www.rcsb.org/structure/6tcg)](https://github.com/michal-zurkowski/drawtetrado/blob/main/6tcg.svg)
+G-tract](https://www.rcsb.org/structure/6tcg)](https://github.com/michal-zurkowski/drawtetrado/blob/main/6tcg.svg?raw=true)
 
 ## G4-helix (dimer)
 
 ![[1MYQ: An intramolecular quadruplex of (GGA)(4) triplet repeat DNA
 with a G:G:G:G tetrad and a G(:A):G(:A):G(:A):G heptad, and its dimeric
-interaction](https://www.rcsb.org/structure/1myq)](https://github.com/michal-zurkowski/drawtetrado/blob/main/1myq.svg)
+interaction](https://www.rcsb.org/structure/1myq)](https://github.com/michal-zurkowski/drawtetrado/blob/main/1myq.svg?raw=true)
 
 # Bibliography
 
