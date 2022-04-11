@@ -82,25 +82,25 @@
   <text font-family="Arial, Helvetica" font-size="24" font-weight="bold" style="white-space: pre; font-size: 24px;" x="369.888" y="620.408">3'</text>
   <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-width: 2px; stroke-miterlimit: 1; stroke-dashoffset: -28px;" x1="174.076" y1="213.882" x2="114.089" y2="183.388" transform="matrix(-1, 0, 0, -1, 288.165001, 397.270004)"/>
   <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-dashoffset: -1px; stroke-miterlimit: 0; stroke-width: 2px;" x1="228.958" y1="166.501" x2="128.355" y2="169.43" transform="matrix(-1, 0, 0, -1, 357.312988, 335.931)"/>
-  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="38.958" y="177.136">--line-width</text>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="38.958" y="177.136">line-stroke</text>
   <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 17.4px;" x="360.304" y="34.483"> </text>
   <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-width: 2px; stroke-miterlimit: 1; stroke-dashoffset: -28px;" x1="542.334" y1="300.84" x2="440.273" y2="300.839"/>
   <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-width: 2px; stroke-miterlimit: 1; stroke-dashoffset: -28px;" x1="542.646" y1="117.253" x2="439.34" y2="117.252"/>
-  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="549.036" y="122.298">--color-gb-syn</text>
-  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="548.169" y="306.507">--color-gb-anti</text>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="549.036" y="122.298">color: syn (font)</text>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="548.169" y="306.507">color: anti (font)</text>
   <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-width: 2px; stroke-miterlimit: 1; stroke-dashoffset: -28px;" x1="542.646" y1="162.066" x2="415.069" y2="161.443"/>
-  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="548.498" y="167.728">--color-border</text>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="548.498" y="167.728">color: border</text>
   <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-dashoffset: -1px; stroke-miterlimit: 0; stroke-width: 2px;" x1="208.145" y1="697.884" x2="207.523" y2="638.763"/>
   <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-dashoffset: -1px; stroke-miterlimit: 0; stroke-width: 2px;" x1="332.765" y1="698.573" x2="300.404" y2="641.319"/>
   <polyline style="fill: none; stroke: rgb(0, 0, 0);" points="249.538 621.96 248.908 641.855 349.095 642.497 349.724 623.244"/>
   <polyline style="fill: none; stroke: rgb(0, 0, 0);" points="276.29 478.825 267.578 478.825 266.955 429.661 276.912 429.661"/>
   <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-dashoffset: -1px; stroke-miterlimit: 0; stroke-width: 2px;" x1="265.398" y1="453.621" x2="136.577" y2="452.998" transform="matrix(-1, 0, 0, -1, 401.975006, 906.618988)"/>
-  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="6.745" y="456.732">--tetrad-spacing</text>
-  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="283.107" y="718.631">--nucl-longer</text>
-  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="157.539" y="719.519">--nucl-shorter</text>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="6.745" y="456.732">tetrad-spacing</text>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="283.107" y="718.631">nucl-longer</text>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="157.539" y="719.519">nucl-shorter</text>
   <polyline style="fill: none; stroke: rgb(0, 0, 0);" points="172.533 621.457 172.101 641.352 240.747 641.994 241.178 622.741"/>
   <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-width: 2px; stroke-miterlimit: 1; stroke-dashoffset: -28px;" x1="489.487" y1="558.468" x2="387.426" y2="558.467"/>
-  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="494.595" y="563.134">--nucl-spacing</text>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="494.595" y="563.134">nucl-spacing</text>
   <line style="fill: none; stroke: rgb(0, 0, 0); marker-end: url(#a); stroke-width: 2px; stroke-miterlimit: 1; stroke-dashoffset: -28px;" x1="539.273" y1="237.551" x2="464.594" y2="238.173"/>
-  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="546.399" y="242.598">--color-connection</text>
+  <text style="font-family: Arial, sans-serif; font-size: 17.4px; white-space: pre;" x="546.399" y="242.598">color: connection</text>
 </svg>

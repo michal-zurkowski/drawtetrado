@@ -21,7 +21,10 @@ class Nucleotide:
     def Block(self, width, height, angle):
         self.coords = []
         self.coords.append(Point(0.0, 0.0))
-        shift = height / math.tan(math.radians(angle))
+        if math.tan(math.radians(angle)) != 0:
+            shift = height / math.tan(math.radians(angle))
+        else:
+            shift = height / math.tan(math.radians(0.01))
         self.coords.append(Point(shift, -height))
         self.coords.append(Point(shift + width, -height))
         self.coords.append(Point(width, 0.0))
@@ -43,7 +46,7 @@ class Nucleotide:
 
         shift.y -= self.tetrade_no * (sin_val * (conf.longer + conf.shorter + conf.spacing) + \
                                       conf.tetrade_spacing)
-        if self.onz == "-":
+        if self.GetOnzPlusMinus() == "-":
             width_0 = conf.longer
             height_0 = sin_val * conf.shorter
             width_1 = conf.shorter
@@ -71,10 +74,23 @@ class Nucleotide:
 
         self.ShiftBlock(shift)
 
-    def GetOnz(self):
+    def GetOnzPlusMinus(self):
         if self.onz_full[-1] == "-":
             return "-"
         return "+"
+
+    def GetOnz(self):
+        res = self.onz_full[0:1].lower() + "_"
+        if self.GetOnzPlusMinus() == "-":
+            res += "minus"
+        else:
+            res += "plus"
+        # Only o/n/z_plus/minus are allowed
+        if res != "o_plus" and res != "o_minus" and \
+           res != "n_plus" and res != "n_minus" and \
+           res != "z_plus" and res != "z_minus":
+            return "onz_default"
+        return res
 
     def __init__(self, data, used_nucl, tetr_no, tetr_onz, pos):
         self.number = data["number"]

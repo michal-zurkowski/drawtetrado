@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="513.6639992842481" version="1.1" width="571.4777692664092">
+  <defs>
+    <marker id="arrowhead" markerHeight="6.4" markerUnits="strokeWidth" markerWidth="8.0" orient="auto" refX="7.6" refY="4.1">
+      <polyline fill="#000000" fill-opacity="1.0" points="0.8,1.6 7.6,4.1 0.8,6.4" stroke="none"/>
+    </marker>
+  </defs>
+  <path d="M 137.88799976141604 444.7199994035401 C 168.57116894823395 618.7328989809948 222.9066003181752 -55.06889969674668 253.58976950499311 118.94399988070802" fill="none" stroke="#000000" stroke-opacity="1.0" stroke-width="3.0"/>
+  <path d="M 253.58976950499311 306.83199964212406 C 276.68306869585024 437.8006074982244 410.496470314136 -12.024607975392342 433.5897695049931 118.94399988070802" fill="none" stroke="#000000" stroke-opacity="1.0" stroke-width="3.0"/>
+  <polyline fill="none" marker-mid="url(#arrowhead)" points="253.58976950499311,118.94399988070802 253.58976950499311,230.88799976141604 253.58976950499311,306.83199964212406" stroke="#000000" stroke-opacity="1.0" stroke-width="3.0"/>
+  <polygon fill="#1F78B4" fill-opacity="0.8509803921568627" points="137.88799976141604,444.7199994035401 202.16676073007,368.1155550916423 272.16676073007,368.1155550916423 207.88799976141604,444.7199994035401" stroke="#1F78B4" stroke-width="3.0"/>
+  <polygon fill="#1F78B4" fill-opacity="0.8509803921568627" points="208.59463682693536,360.45511066045253 253.58976950499311,306.83199964212406 353.5897695049931,306.83199964212406 308.59463682693536,360.45511066045253" stroke="#1F78B4" stroke-width="3.0"/>
+  <polygon fill="#1F78B4" fill-opacity="0.8509803921568627" points="299.31100853633916,383.43644395402185 363.5897695049931,306.83199964212406 433.5897695049931,306.83199964212406 369.31100853633916,383.43644395402185" stroke="#1F78B4" stroke-width="3.0"/>
+  <polygon fill="#1F78B4" fill-opacity="0.8509803921568627" points="217.88799976141604,444.7199994035401 262.8831324394738,391.0968883852116 362.8831324394738,391.0968883852116 317.88799976141604,444.7199994035401" stroke="#1F78B4" stroke-width="3.0"/>
+  <polygon fill="#1F78B4" fill-opacity="0.8509803921568627" points="137.88799976141604,256.83199964212406 202.16676073007,180.22755533022627 272.16676073007,180.22755533022627 207.88799976141604,256.83199964212406" stroke="#1F78B4" stroke-width="3.0"/>
+  <polygon fill="#1F78B4" fill-opacity="0.8509803921568627" points="208.59463682693536,172.5671108990365 253.58976950499311,118.94399988070802 353.5897695049931,118.94399988070802 308.59463682693536,172.5671108990365" stroke="#1F78B4" stroke-width="3.0"/>
+  <polygon fill="#1F78B4" fill-opacity="0.8509803921568627" points="299.31100853633916,195.5484441926058 363.5897695049931,118.94399988070802 433.5897695049931,118.94399988070802 369.31100853633916,195.5484441926058" stroke="#1F78B4" stroke-width="3.0"/>
+  <polygon fill="#1F78B4" fill-opacity="0.8509803921568627" points="217.88799976141604,256.83199964212406 262.8831324394738,203.2088886237956 362.8831324394738,203.2088886237956 317.88799976141604,256.83199964212406" stroke="#1F78B4" stroke-width="3.0"/>
+  <polyline fill="none" points="137.88799976141604,444.7199994035401 253.58976950499311,306.83199964212406" stroke="#E23D28" stroke-opacity="1.0" stroke-width="3.0"/>
+  <polyline fill="none" points="253.58976950499311,306.83199964212406 433.5897695049931,306.83199964212406" stroke="#E23D28" stroke-opacity="1.0" stroke-width="3.0"/>
+  <polyline fill="none" points="433.5897695049931,306.83199964212406 317.88799976141604,444.7199994035401" stroke="#E23D28" stroke-opacity="1.0" stroke-width="3.0"/>
+  <polyline fill="none" points="317.88799976141604,444.7199994035401 137.88799976141604,444.7199994035401" stroke="#E23D28" stroke-opacity="1.0" stroke-width="3.0"/>
+  <polyline fill="none" points="137.88799976141604,256.83199964212406 253.58976950499311,118.94399988070802" stroke="#E23D28" stroke-opacity="1.0" stroke-width="3.0"/>
+  <polyline fill="none" points="253.58976950499311,118.94399988070802 433.5897695049931,118.94399988070802" stroke="#E23D28" stroke-opacity="1.0" stroke-width="3.0"/>
+  <polyline fill="none" points="433.5897695049931,118.94399988070802 317.88799976141604,256.83199964212406" stroke="#E23D28" stroke-opacity="1.0" stroke-width="3.0"/>
+  <polyline fill="none" points="317.88799976141604,256.83199964212406 137.88799976141604,256.83199964212406" stroke="#E23D28" stroke-opacity="1.0" stroke-width="3.0"/>
+  <path d="M 433.5897695049931 306.83199964212406 C 422.40298874867216 370.2753859654962 329.074780517737 193.38861331875194 317.88799976141604 256.83199964212406" fill="none" stroke="#000000" stroke-opacity="1.0" stroke-width="3.0"/>
+  <polyline fill="none" marker-mid="url(#arrowhead)" points="137.88799976141604,256.83199964212406 137.88799976141604,368.7759995228321 137.88799976141604,444.7199994035401" stroke="#000000" stroke-opacity="1.0" stroke-width="3.0"/>
+  <polyline fill="none" marker-mid="url(#arrowhead)" points="433.5897695049931,118.94399988070802 433.5897695049931,230.88799976141604 433.5897695049931,306.83199964212406" stroke="#000000" stroke-opacity="1.0" stroke-width="3.0"/>
+  <polyline fill="none" marker-mid="url(#arrowhead)" points="317.88799976141604,256.83199964212406 317.88799976141604,368.7759995228321 317.88799976141604,444.7199994035401" stroke="#000000" stroke-opacity="1.0" stroke-width="3.0"/>
+  <circle cx="137.88799976141604" cy="444.7199994035401" fill="#FFFFFF" fill-opacity="1.0" r="6.0" stroke="#000000" stroke-opacity="1.0" stroke-width="2.0"/>
+  <text fill="#1F78B4" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" stroke="#1F78B4" stroke-linejoin="round" stroke-width="2px" style="text-anchor:middle" transform="translate(210.34826910812257, 406.4177772475912) rotate(310) skewX(40.0)">A.DG2</text>
+  <text fill="#FFFFFF" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" style="text-anchor:middle" transform="translate(210.34826910812257, 406.4177772475912) rotate(310) skewX(40.0)">A.DG2</text>
+  <circle cx="253.58976950499311" cy="306.83199964212406" fill="#FFFFFF" fill-opacity="1.0" r="6.0" stroke="#000000" stroke-opacity="1.0" stroke-width="2.0"/>
+  <text fill="#1F78B4" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" stroke="#1F78B4" stroke-linejoin="round" stroke-width="2px" style="text-anchor:middle" transform="translate(276.4130920283438, 338.96444401366784) rotate(0) skewX(140.0)">A.DG5</text>
+  <text fill="#FFFFFF" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" style="text-anchor:middle" transform="translate(276.4130920283438, 338.96444401366784) rotate(0) skewX(140.0)">A.DG5</text>
+  <circle cx="433.5897695049931" cy="306.83199964212406" fill="#FFFFFF" fill-opacity="1.0" r="6.0" stroke="#000000" stroke-opacity="1.0" stroke-width="2.0"/>
+  <text fill="#1F78B4" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" stroke="#1F78B4" stroke-linejoin="round" stroke-width="2px" style="text-anchor:middle" transform="translate(371.77127788304574, 345.134221798073) rotate(310) skewX(40.0)">A.DG8</text>
+  <text fill="#FFFFFF" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" style="text-anchor:middle" transform="translate(371.77127788304574, 345.134221798073) rotate(310) skewX(40.0)">A.DG8</text>
+  <circle cx="317.88799976141604" cy="444.7199994035401" fill="#FFFFFF" fill-opacity="1.0" r="6.0" stroke="#000000" stroke-opacity="1.0" stroke-width="2.0"/>
+  <text fill="#1F78B4" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" stroke="#1F78B4" stroke-linejoin="round" stroke-width="2px" style="text-anchor:middle" transform="translate(285.70645496282447, 423.2293327567554) rotate(0) skewX(140.0)">A.DA12</text>
+  <text fill="#FFFFFF" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" style="text-anchor:middle" transform="translate(285.70645496282447, 423.2293327567554) rotate(0) skewX(140.0)">A.DA12</text>
+  <circle cx="137.88799976141604" cy="256.83199964212406" fill="#FFFFFF" fill-opacity="1.0" r="6.0" stroke="#000000" stroke-opacity="1.0" stroke-width="2.0"/>
+  <text fill="#1F78B4" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" stroke="#1F78B4" stroke-linejoin="round" stroke-width="2px" style="text-anchor:middle" transform="translate(210.34826910812257, 218.52977748617516) rotate(310) skewX(40.0)">A.DG1</text>
+  <text fill="#FFFFFF" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" style="text-anchor:middle" transform="translate(210.34826910812257, 218.52977748617516) rotate(310) skewX(40.0)">A.DG1</text>
+  <circle cx="253.58976950499311" cy="118.94399988070802" fill="#FFFFFF" fill-opacity="1.0" r="6.0" stroke="#000000" stroke-opacity="1.0" stroke-width="2.0"/>
+  <text fill="#1F78B4" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" stroke="#1F78B4" stroke-linejoin="round" stroke-width="2px" style="text-anchor:middle" transform="translate(276.4130920283438, 151.0764442522518) rotate(0) skewX(140.0)">A.DG4</text>
+  <text fill="#FFFFFF" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" style="text-anchor:middle" transform="translate(276.4130920283438, 151.0764442522518) rotate(0) skewX(140.0)">A.DG4</text>
+  <circle cx="433.5897695049931" cy="118.94399988070802" fill="#FFFFFF" fill-opacity="1.0" r="6.0" stroke="#000000" stroke-opacity="1.0" stroke-width="2.0"/>
+  <text fill="#1F78B4" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" stroke="#1F78B4" stroke-linejoin="round" stroke-width="2px" style="text-anchor:middle" transform="translate(371.77127788304574, 157.2462220366569) rotate(310) skewX(40.0)">A.DG7</text>
+  <text fill="#FFFFFF" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" style="text-anchor:middle" transform="translate(371.77127788304574, 157.2462220366569) rotate(310) skewX(40.0)">A.DG7</text>
+  <circle cx="317.88799976141604" cy="256.83199964212406" fill="#FFFFFF" fill-opacity="1.0" r="6.0" stroke="#000000" stroke-opacity="1.0" stroke-width="2.0"/>
+  <text fill="#1F78B4" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" stroke="#1F78B4" stroke-linejoin="round" stroke-width="2px" style="text-anchor:middle" transform="translate(285.70645496282447, 235.34133299533937) rotate(0) skewX(140.0)">A.DG10</text>
+  <text fill="#FFFFFF" font-family="Arial, Helvetica" font-size="20.0" font-weight="bold" style="text-anchor:middle" transform="translate(285.70645496282447, 235.34133299533937) rotate(0) skewX(140.0)">A.DG10</text>
+  <text fill="#000000" font-family="Arial, Helvetica" font-size="24.0" font-weight="bold" stroke="white" stroke-linejoin="round" stroke-width="2px" style="text-anchor:end" transform="translate(117.88799976141604, 261.6319996421241)">5'</text>
+  <text fill="#000000" font-family="Arial, Helvetica" font-size="24.0" font-weight="bold" style="text-anchor:end" transform="translate(117.88799976141604, 261.6319996421241)">5'</text>
+  <text fill="#000000" font-family="Arial, Helvetica" font-size="24.0" font-weight="bold" stroke="white" stroke-linejoin="round" stroke-width="2px" style="text-anchor:begin" transform="translate(337.88799976141604, 449.5199994035401)">3'</text>
+  <text fill="#000000" font-family="Arial, Helvetica" font-size="24.0" font-weight="bold" style="text-anchor:begin" transform="translate(337.88799976141604, 449.5199994035401)">3'</text>
+</svg>
