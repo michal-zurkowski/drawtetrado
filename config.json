@@ -1,0 +1,53 @@
+{
+  "_comment0": "Example config.json with all available parameters default values.",
+  "_comment1": "All parameters explained in README",
+
+  "scale": 1.0,
+
+  "nucl-longer": 100.0,
+  "nucl-shorter": 70.0,
+  "nucl-spacing": 10.0,
+
+  "angle": 50.0,
+  "tetrad-spacing": 50.0,
+
+  "line-stroke": 3.0,
+  "point-size": 6.0,
+  "point-stroke": 2.0,
+
+  "se-label-spacing": 20.0,
+  "se-label-font-size": 24.0,
+  "font-family": "Arial, Helvetica",
+  "label-font-size": 20.0,
+  
+  "tilted_labels": true,
+  "label-chain": true,
+  "label-nucl-name": true,
+  "label-nucl-fullname": true,
+  "label-number": true,
+
+  "_comment2": "Colors in RGBA hex. If only RGB is provided, alpha of 1.0 is used",
+  "_comment3": "for anything other than ONZ colors. Those default to 0.85.",
+  "colors": {
+    "connection": "#000000FF",
+    "border": "#E23D28FF",
+    "text": "#000000FF",
+    "point": "#FFFFFFFF",
+    "anti": "#FFFFFFFF",
+    "syn": "#000000FF",
+    "n/a": "#606060FF",
+    "onz_default": "#646464D9",
+    "o_plus": "#1F78B4D9",
+    "o_minus": "#A6CEE3D9",
+    "n_plus": "#33A02CD9",
+    "n_minus": "#B2DF8AD9",
+    "z_plus": "#FF7F00D9",
+    "z_minus": "#FDBF6FD9"
+  },
+
+  "_comment3": "dictionary of nucleotide full name to desired color in RGBA hex.",
+  "_comment4": "If only RGB is provided, alpha of 0.85 (aka. D9) is used.",
+  "_comment_example": "'A.DG12': '#E23D28AA'",
+  "nucl-color-override": {
+  }
+}

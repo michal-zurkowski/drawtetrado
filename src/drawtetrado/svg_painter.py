@@ -3,6 +3,8 @@ import sys
 import math
 from enum import Enum
 import cairo
+import tempfile
+import json
 
 class ConnType(Enum):
     SIMPLE = 1
@@ -43,44 +45,67 @@ class Point(tuple):
 
 
 class Config:
-    def __init__(self, scale = 1.0):
-        self.scale = scale
+    def __init__(self, scale = 1.0, config_path = None):
+        if config_path == None:
+            json_data = json.loads("{}");
+        else:
+            with open(config_path) as file:
+                json_data = json.load(file)
+        self.scale = scale if not "scale" in json_data else json_data["scale"]
         # Size parameters of the nucleotides and tetrade.
-        self.longer = 100.0 * self.scale
-        self.shorter = 70.0 * self.scale
-        self.spacing = 10.0 * self.scale
-        self.angle = 50.0
-        self.tetrade_spacing = 50.0 * self.scale
-        self.stroke_width = 3.0 * self.scale
-        self.point_size = 6.0 * self.scale
-        self.point_stroke = 2.0 * self.scale
+        self.longer = self.scale * (100.0 if not "nucl-longer" in json_data else json_data["nucl-longer"])
+        self.shorter = self.scale * (70.0 if not "nucl-shorter" in json_data else json_data["nucl-shorter"])
+        self.spacing = self.scale * (10.0 if not "nucl-spacing" in json_data else json_data["nucl-spacing"])
+        self.angle = 50.0 if not "angle" in json_data else json_data["angle"]
+        self.tetrade_spacing = self.scale * (50.0 if not "tetrad-spacing" in json_data else json_data["tetrad-spacing"])
+        self.stroke_width = self.scale * (3.0 if not "line-stroke" in json_data else json_data["line-width"])
+        self.point_size = self.scale * (6.0 if not "point-size" in json_data else json_data["point-size"])
+        self.point_stroke = self.scale * (2.0 if not "point-stroke" in  json_data else json_data["point-stroke"])
         # Start End label (5' and 3')
-        self.se_label_spacing = 20 * self.scale
-        self.se_label_font_size = 24.0 * self.scale
-        self.font_family = "Arial, Helvetica"
-        self.label_font_size = 20.0 * self.scale
-        self.tilted_labels = True
+        self.se_label_spacing = self.scale * (20.0 if not "se-label-spacing" in json_data else json_data["se-label-spacing"])
+        self.se_label_font_size = self.scale * (24.0 if not "se-label-font-size" in json_data else json_data["se-label-font-size"])
+        self.font_family = "Arial, Helvetica" if not "font-family" in json_data else json_data["font-family"]
+        self.label_font_size = self.scale * (20.0 if not "nucl-font-size" in json_data else json_data["font-family"])
+        self.tilted_labels = True if not "tilted-labels" in json_data else json_data["tilted-labels"]
 
-        self.label_chain = True
-        self.label_nucleotide = True
-        self.label_nucleotide_full = True
-        self.label_number = True
+        self.label_chain = True if not "label-chain" in json_data else json_data["label-chain"]
+        self.label_nucleotide_full = True if not "label-nucl-fullname" in json_data else json_data["label-nucl-fullname"]
+        self.label_nucleotide = True if not "label-nucl-name" in json_data else json_data["label-nucl-full-name"]
+        if self.label_nucleotide == False and self.label_nucelotide_full == True:
+            self.label_nucleotide_full = False
+        self.label_number = True if not "label-number" in json_data else json_data["label-number"]
 
         self.colors = {}
-        self.colors["connection"] = "#000000"
-        self.colors["border"] = "#E23D28"
-        self.colors["text"] = "#000000"
-        self.colors["anti"] = "#FFCC38"
-        self.colors["syn"] = "#FF992b"
-        self.colors["n/a"] = "#BB9977"
-
+        json_colors = {} if not "colors" in json_data else json_data["colors"]
+        self.colors["connection"] = "#000000FF" if not "connection" in json_colors else json_colors["connection"]
+        self.colors["border"] = "#E23D28FF" if not "border" in json_colors else json_colors["border"]
+        self.colors["text"] = "#000000FF" if not "text" in json_colors else json_colors["text"]
+        self.colors["point"] = "#FFFFFFFF" if not "point" in json_colors else json_colors["point"]
+        # Those refer to the text color on the nucleotyde block.
+        self.colors["anti"] = "#FFFFFFFF" if not "anti" in json_colors else json_colors["anti"]
+        self.colors["syn"] = "#000000FF" if not "syn" in json_colors else json_colors["syn"]
+        self.colors["n/a"] = "#606060FF" if not "n/a" in json_colors else json_colors["n/a"]
+        # Those refer to the fill color on the nucleotyde block.
+        # Default alpha is 85% -> D9 
+        self.colors["onz_default"] = "#646464D9" if not "onz_default" in json_colors else json_colors["onz_default"]
+        self.colors["o_plus"] = "#1F78B4D9" if not "o_plus" in json_colors else json_colors["o_plus"]
+        self.colors["o_minus"] = "#A6CEE3D9" if not "o_minus" in json_colors else json_colors["o_minus"]
+        self.colors["n_plus"] = "#33A02CD9" if not "n_plus" in json_colors else json_colors["n_plus"]
+        self.colors["n_minus"] = "#B2DF8AD9" if not "n_minus" in json_colors else json_colors["n_minus"]
+        self.colors["z_plus"] = "#FF7F00D9" if not "z_plus" in json_colors else json_colors["z_plus"]
+        self.colors["z_minus"] = "#FDBF6FD9" if not "z_minus" in json_colors else json_colors["z_minus"]
+        # Allow for ONZ colors above to be overriden if necessary for 
+        # individual nucleotides
+        # "nucl.full_name": "RGBA"
+        self.nucl_colors = {} if not "nucl-color-override" in json_data else json_data["nucl-color-override"]
 
 class SvgMaker:
     def PrepareMarker(self):
         arrowhead = self.svg.marker(insert = (7.6, 4.1), size = (8.0, 6.4), \
                 orient = "auto", markerUnits = "strokeWidth", id = "arrowhead")
         arrowhead.add(self.svg.polyline([(0.8, 1.6), (7.6, 4.1), (0.8, 6.4)], \
-            stroke = "none", fill = self.GetColor("connection")))
+            stroke = "none", fill = self.GetColor("connection"), \
+            fill_opacity = self.GetAlpha("connection")))
         self.svg.defs.add(arrowhead)
 
     def GetCanvasSize(self, padding, height, width):
@@ -99,7 +124,7 @@ class SvgMaker:
         height = ((config.longer + config.shorter + config.spacing) * sin_val + \
                    config.tetrade_spacing) * len(quadruplex.tetrads)
 
-
+        self.cairo_tempfile = tempfile.NamedTemporaryFile(suffix=".svg")
         self.svg = svgwrite.Drawing(file_path, size = self.GetCanvasSize(padding, height, width), \
                 profile = "full")
         self.PrepareMarker()
@@ -116,12 +141,32 @@ class SvgMaker:
         else:
             return coords + shift
 
+    def RGBAtoAlpha(self, rgba, def_alpha = 0.85):
+        if rgba != None and len(rgba[7:9]) == 2:
+            return float(int(rgba[7:9], 16)) / 255.0
+        return def_alpha
+
+    def RGBAtoRGB(self, rgba):
+        return rgba[0:7]
+
+    # Only used for ONZ nucleotide fill or override of the color.
+    # Default opacity is 0.85
+    def GetAlpha(self, name):
+        return self.RGBAtoAlpha(self.config.colors[name])
+
     def GetColor(self, name):
         if name in self.config.colors:
-            return self.config.colors[name]
+            return self.RGBAtoRGB(self.config.colors[name])
+        return self.RGBAtoRGB(self.config.colors["n/a"]) # Default color
 
-        return self.config.colors["n/a"] # Default color
-
+    def GetNuclOverride(self, name):
+        # We are checking it before running this function but just in case
+        # there is some error we want to return default_onz.
+        if name in self.config.nucl_colors:
+            return self.RGBAtoRGB(self.config.nucl_colors[name]), \
+                   self.RGBAtoAlpha(self.config.nucl_colors[name])
+        return self.RGBAtoRGB(self.config.colors["onz_default"]), \
+               self.RGBAtoAlpha(self.config.colors["onz_default"])
 
     def Prepare(self):
         for name, nucl in self.quadruplex.nucl_quad.items():
@@ -183,9 +228,15 @@ class SvgMaker:
         shift = self.base_shift
         conf = self.config
 
+        color = self.GetColor(nucl.onz)
+        alpha = self.GetAlpha(nucl.onz)
+        # Override colors of the nucleotide if it exists in the nucl_color dict.
+        if nucl.full_name in conf.nucl_colors:
+            color, alpha = self.GetNuclOverride(nucl.full_name)
+
         block = self.svg.polygon(self.ShiftCoords(nucl.coords, shift), \
-                fill = self.GetColor(nucl.bond), fill_opacity = 0.85, \
-                stroke = self.GetColor(nucl.bond), stroke_width = conf.stroke_width)
+                fill = color, fill_opacity = alpha, \
+                stroke = color, stroke_width = conf.stroke_width)
 
         self.svg.add(block)
 
@@ -219,7 +270,7 @@ class SvgMaker:
         return name
 
     def ProperFontSize(self, text, fontsize, font, desired_width):
-        surface = cairo.SVGSurface('text_width.svg', 1280, 200)
+        surface = cairo.SVGSurface(self.cairo_tempfile.name, 1280, 200)
         cr = cairo.Context(surface)
         cr.select_font_face(font, cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
         cr.set_font_size(fontsize)
@@ -236,14 +287,14 @@ class SvgMaker:
         conf = self.config
         name = self.NucleotideName(nucl)
         font_family = conf.font_family
-        font_size = self.ProperFontSize(name, conf.label_font_size, font_family, conf.longer) 
+        font_size = self.ProperFontSize(name, conf.label_font_size, font_family, conf.longer)
 
         nucl.center = self.ShiftCoords(nucl.center, shift)
         tan_val = math.tan(math.radians(conf.angle))
         sin_val = math.sin(math.radians(conf.angle))
 
-        if (nucl.onz == "+" and (nucl.position == 0 or nucl.position == 2)) or \
-           (nucl.onz == "-" and (nucl.position == 1 or nucl.position == 3)):
+        if (nucl.GetOnzPlusMinus() == "+" and (nucl.position == 0 or nucl.position == 2)) or \
+           (nucl.GetOnzPlusMinus() == "-" and (nucl.position == 1 or nucl.position == 3)):
             nucl.center.x += font_size * (sin_val - 0.5)
 
             rotation = int(360 - conf.angle)
@@ -261,15 +312,20 @@ class SvgMaker:
             else:
                 skewX = 0
 
-        label_outline = self.svg.text(name, fill = self.GetColor("text"), \
+        outer_color = self.GetColor(nucl.onz)
+        # Override colors of the nucleotide if it exists in the nucl_color dict.
+        if nucl.full_name in conf.nucl_colors:
+            outer_color, _ = self.GetNuclOverride(nucl.full_name)
+
+        label_outline = self.svg.text(name, fill = outer_color, \
                 transform = "translate({0}, {1}) rotate({2}) skewX({3})".format( \
                 nucl.center.x, nucl.center.y, rotation, skewX, rotation), \
                 style = "text-anchor:middle", \
                 font_weight = "bold", font_size = font_size, font_family = font_family, \
-                stroke = self.GetColor(nucl.bond), stroke_width = "2px", \
+                stroke = outer_color, stroke_width = "2px", \
                 stroke_linejoin = "round")
 
-        label_fill = self.svg.text(name, fill = self.GetColor("text"), \
+        label_fill = self.svg.text(name, fill = self.GetColor(nucl.bond), \
                 transform = "translate({0}, {1}) rotate({2}) skewX({3})".format( \
                 nucl.center.x, nucl.center.y, rotation, skewX), \
                 style = "text-anchor:middle", \
@@ -286,11 +342,13 @@ class SvgMaker:
 
 
         line = self.svg.polyline([point_a, point_b], stroke = self.GetColor("border"), \
-                stroke_width = self.config.stroke_width, fill = "none", stroke_opacity = 0.95)
+                stroke_width = self.config.stroke_width, fill = "none", \
+                stroke_opacity = self.GetAlpha("border"))
 
         self.svg.add(line)
 
 
+    # For drawinf 5' and 3' labels.
     def DrawLabel(self, nucl, label):
         pos = nucl.position
         pos_str = self.ShiftCoords(nucl.coords[pos], self.base_shift)
@@ -328,14 +386,16 @@ class SvgMaker:
 
         line = self.svg.polyline([point_a, (point_a.x, point_a.y - midpoint), point_b], \
                 stroke = self.GetColor("connection"), stroke_width = conf.stroke_width, \
-                fill = "none", marker_mid = "url(#arrowhead)", stroke_opacity = 1.0)
+                fill = "none", marker_mid = "url(#arrowhead)", \
+                stroke_opacity = self.GetAlpha("connection"))
 
         self.svg.add(line)
 
     def DrawSameLevel(self, point_a, point_b, flow_out, flow_in, divisor):
         conf = self.config
         bezier = self.svg.path(d="M", stroke = self.GetColor("connection"), \
-                stroke_width = conf.stroke_width, fill = "none", stroke_opacity = 1.0)
+                stroke_width = conf.stroke_width, fill = "none", \
+                stroke_opacity = self.GetAlpha("connection"))
         distance = point_a.Distance(point_b)
 
         bezier.push(point_a)
@@ -349,7 +409,8 @@ class SvgMaker:
     def DrawSide(self, point_a, point_b, flow_out, flow_in, side, angle, divisor):
         conf = self.config
         bezier = self.svg.path(d="M", stroke = self.GetColor("connection"), \
-                stroke_width = conf.stroke_width, fill = "none", stroke_opacity = 1.0)
+                stroke_width = conf.stroke_width, fill = "none", \
+                stroke_opacity = self.GetAlpha("connection"))
         distance = point_a.Distance(point_b)
 
         bezier.push(point_a)
@@ -438,5 +499,6 @@ class SvgMaker:
         point = self.ShiftCoords(nucl.coords[nucl.position], self.base_shift)
         self.svg.add(self.svg.circle(point, r = conf.point_size, \
                 stroke = self.GetColor("connection"), stroke_width = conf.point_stroke, \
-                fill = "white", opacity = 0.95))
+                stroke_opacity = self.GetAlpha("connection"), \
+                fill = self.GetColor("point"), fill_opacity = self.GetAlpha("point")))
 
