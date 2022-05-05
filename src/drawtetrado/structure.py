@@ -571,7 +571,7 @@ class Structure:
                 pair = tetrad_pairs.pop(0)
                 tetrad_ordered.append(pair["tetrad1"])
                 tetrad_ordered.append(pair["tetrad2"])
-                to_temove = 0
+                to_remove = 0
                 while len(tetrad_pairs) > 0:
                     found = False
                     for index_pair, pair in enumerate(tetrad_pairs):
