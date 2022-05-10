@@ -33,4 +33,4 @@ setup(name="drawtetrado",
       ],
       ext_modules=cythonize(["cython/optimizer.pyx"]),
       entry_points={'console_scripts': ['drawtetrado=drawtetrado.main:main']},
-      install_requires=['pycairo', 'svgwrite'])
+      install_requires=['pycairo', 'svgwrite', 'eltetrado'])
