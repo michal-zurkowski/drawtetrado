@@ -340,7 +340,7 @@ class Quadruplex:
         nucl = self.nucl_quad[chain["first"]]
         while nucl.connected_to != "":
             conn = self.nucl_quad[nucl.connected_to]
-            print(nucl.full_name, nucl.flow_out, nucl.flow_in)
+            #print(nucl.full_name, nucl.flow_out, nucl.flow_in)
             nucl = conn
 
     # TODO Optimize. Do I rly need so many iterations?

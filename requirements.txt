@@ -1,2 +1,4 @@
 pycairo
 svgwrite
+orjson
+eltetrado
