@@ -58,7 +58,7 @@ class Config:
         self.spacing = self.scale * (10.0 if not "nucl-spacing" in json_data else json_data["nucl-spacing"])
         self.angle = 50.0 if not "angle" in json_data else json_data["angle"]
         self.tetrade_spacing = self.scale * (50.0 if not "tetrad-spacing" in json_data else json_data["tetrad-spacing"])
-        self.stroke_width = self.scale * (3.0 if not "line-stroke" in json_data else json_data["line-width"])
+        self.stroke_width = self.scale * (3.0 if not "line-stroke" in json_data else json_data["line-stroke"])
         self.point_size = self.scale * (6.0 if not "point-size" in json_data else json_data["point-size"])
         self.point_stroke = self.scale * (2.0 if not "point-stroke" in  json_data else json_data["point-stroke"])
         # Start End label (5' and 3')
@@ -70,7 +70,7 @@ class Config:
 
         self.label_chain = True if not "label-chain" in json_data else json_data["label-chain"]
         self.label_nucleotide_full = True if not "label-nucl-fullname" in json_data else json_data["label-nucl-fullname"]
-        self.label_nucleotide = True if not "label-nucl-name" in json_data else json_data["label-nucl-full-name"]
+        self.label_nucleotide = True if not "label-nucl-name" in json_data else json_data["label-nucl-name"]
         if self.label_nucleotide == False and self.label_nucelotide_full == True:
             self.label_nucleotide_full = False
         self.label_number = True if not "label-number" in json_data else json_data["label-number"]
@@ -131,12 +131,10 @@ class SvgMaker:
         self.base_shift = Point(padding, padding * 0.5 + height)
 
     def ShiftCoords(self, coords, shift):
-        #print(type(coords), type(shift))
         if type(coords) == list:
             shifted = []
             for coord in coords:
                 shifted.append(coord + shift)
-            #print(shifted, coords)
             return shifted
         else:
             return coords + shift

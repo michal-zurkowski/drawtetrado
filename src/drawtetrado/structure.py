@@ -340,7 +340,7 @@ class Quadruplex:
         nucl = self.nucl_quad[chain["first"]]
         while nucl.connected_to != "":
             conn = self.nucl_quad[nucl.connected_to]
-            print(nucl.full_name, nucl.flow_out, nucl.flow_in)
+            #print(nucl.full_name, nucl.flow_out, nucl.flow_in)
             nucl = conn
 
     # TODO Optimize. Do I rly need so many iterations?
@@ -571,7 +571,7 @@ class Structure:
                 pair = tetrad_pairs.pop(0)
                 tetrad_ordered.append(pair["tetrad1"])
                 tetrad_ordered.append(pair["tetrad2"])
-                to_temove = 0
+                to_remove = 0
                 while len(tetrad_pairs) > 0:
                     found = False
                     for index_pair, pair in enumerate(tetrad_pairs):
