@@ -7,10 +7,10 @@ from Cython.Build import cythonize
 with open('README.md') as f:
     long_description = f.read()
 
-os.environ['CFLAGS'] = '-std=c++2a'
+os.environ['CFLAGS'] = '-O3 -std=c++2a'
 
 setup(name = "drawtetrado",
-      version = "1.5dev1",
+      version = "1.4.1dev1",
       packages = ['drawtetrado'],
       package_dir = {'': 'src'},
       author = "Michal Zurkowski",
