@@ -47,7 +47,8 @@ PDBx/mmCIF files which will be first analyzed internally with ElTetrado.
                             ElTetrado. If PDB or PDBx/mmCIF file is provided, it will
                             be first analyzed using ElTetrado.
       -o OUTPUT_TEMPLATE, --output-template OUTPUT_TEMPLATE
-                            path to output SVG file template
+                            (optional) path to output SVG file template
+                            [default=input file path and basename]
       --config CONFIG       (optional) JSON config file containing all parameter
                             changes and individual nucleotide coloring overrides
       -m MODEL, --model MODEL
@@ -57,8 +58,8 @@ PDBx/mmCIF files which will be first analyzed internally with ElTetrado.
                             nucleotides; this option can be used with value 1 or 2 to
                             allow this number of nucleotides to be non-stacked with
                             otherwise well aligned tetrad [default=2]
-      --strict              (optional, ElTetrado) nucleotides in tetrad are found when
-                            linked only by cWH pairing
+      --strict              (optional, ElTetrado) nucleotides in tetrad are found
+                            when linked only by cWH pairing
       --no-reorder          (optional, ElTetrado) chains of bi- and tetramolecular
                             quadruplexes should be reordered to be able to have them
                             classified; when this is set, chains will be processed in
@@ -66,11 +67,13 @@ PDBx/mmCIF files which will be first analyzed internally with ElTetrado.
                             they will likely be misclassified; use with care!
 
     The output path is a template. Program will generate drawings for each individual
-    quadruplex in each helice as well as each full helice.If we have file with 2
-    helices with 2 quadruplexes each, if output_template=/tmp/out.svg, the resulting
-    files will be /tmp/out_0.svg, with full helice 0, /tmp/out_0_0.svg and
-    /tmp/out_0_1.svg for each quadruplex in helice 0. Similar files will be created
-    for helice 1 with /tmp/out_1.svg and /tmp/out_1_0.svg, /tmp/out_1_1.svg.
+    quadruplex in each helix as well as each full helix.If we have file with 2
+    helices with 2 quadruplexes each, if no output_template value is provided, path
+    and basename of the input file will be used. If it is provided,
+    output_template=/tmp/out, the resulting files will be /tmp/out_0.svg, with full
+    helix 0, /tmp/out_0_0.svg and /tmp/out_0_1.svg for each quadruplex in helice 0.
+    Similar files will be created for helix 1 with /tmp/out_1.svg and
+    /tmp/out_1_0.svg, /tmp/out_1_1.svg.
 
 # Visual customization
 
