@@ -1,18 +1,20 @@
-import os
-import sys
-import orjson
 import gzip
 import json
+import os
+import sys
 import tempfile
-from typing import TextIO
 from argparse import ArgumentParser
+from typing import IO
 
+import orjson
 from eltetrado.analysis import eltetrado
-from eltetrado.model import generate_dto
-from eltetrado.structure import read_3d_structure, read_2d_structure
+from eltetrado.dto import generate_dto
+from rnapolis.annotator import extract_secondary_structure
+from rnapolis.parser import read_3d_structure
 
 import drawtetrado.structure as structure
 import drawtetrado.svg_painter as svg_painter
+
 
 def Draw(struct, output_file, config = svg_painter.Config(1.0)):
     if len(struct.tetrads) == 0:
@@ -59,7 +61,7 @@ def DrawFromFile(filename_json, output_file, config = svg_painter.Config(1.0)):
     Draw(structure.Structure().fromFile(filename_json), output_file, config)
 
 # For ElTetrado
-def handle_input_file(path) -> TextIO:
+def handle_input_file(path) -> IO[str]:
     root, ext = os.path.splitext(path)
 
     if ext == '.gz':
@@ -136,7 +138,7 @@ def main():
     else:
         cif_or_pdb = handle_input_file(args.input)
         structure3d = read_3d_structure(cif_or_pdb, args.model)
-        structure2d = read_2d_structure(cif_or_pdb, args.model)
+        structure2d = extract_secondary_structure(structure3d, args.model)
         analysis = eltetrado(structure2d, structure3d, args.strict, args.no_reorder, args.stacking_mismatch)
         dto = generate_dto(analysis)
         if  not args.output_template:
