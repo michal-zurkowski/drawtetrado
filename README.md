@@ -55,7 +55,7 @@ PDBx/mmCIF files which will be first analyzed internally with ElTetrado.
                             (optional, ElTetrado) model number to process
       --stacking-mismatch STACKING_MISMATCH
                             (optional, ElTetrado) a perfect tetrad stacking covers 4
-                            nucleotides; this option can be used with value 1 or 2 to
+                            nucleotides; this option can be used with values 1 or 2 to
                             allow this number of nucleotides to be non-stacked with
                             otherwise well aligned tetrad [default=2]
       --strict              (optional, ElTetrado) nucleotides in tetrad are found
@@ -63,25 +63,25 @@ PDBx/mmCIF files which will be first analyzed internally with ElTetrado.
       --no-reorder          (optional, ElTetrado) chains of bi- and tetramolecular
                             quadruplexes should be reordered to be able to have them
                             classified; when this is set, chains will be processed in
-                            original order, which for bi-/tetramolecular means that
+                            the original order, which for bi-/tetramolecular means that
                             they will likely be misclassified; use with care!
 
-    The output path is a template. Program will generate drawings for each individual
-    quadruplex in each helix as well as each full helix.If we have file with 2
+    The output path is a template. The program will generate drawings for each individual
+    quadruplex in each helix as well as each full helix. If we have a file with 2
     helices with 2 quadruplexes each, if no output_template value is provided, path
     and basename of the input file will be used. If it is provided,
     output_template=/tmp/out, the resulting files will be /tmp/out_0.svg, with full
-    helix 0, /tmp/out_0_0.svg and /tmp/out_0_1.svg for each quadruplex in helice 0.
+    helix 0, /tmp/out_0_0.svg and /tmp/out_0_1.svg for each quadruplex in helix 0.
     Similar files will be created for helix 1 with /tmp/out_1.svg and
     /tmp/out_1_0.svg, /tmp/out_1_1.svg.
 
 # Visual customization
 
-DrawTetrado allows for wide veriaty of changes to the visual representation of
+DrawTetrado allows for a wide variety of changes to the visual representation of
 the resulting drawing.
 
 All modifications to visual aspects of the drawing can be done using JSON
-formatted config file. Example config.json is available in the respository with
+formatted config file. Example config.json is available in the repository with
 all possible parameters and their default values.
 
 ```json
