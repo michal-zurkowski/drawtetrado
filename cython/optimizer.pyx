@@ -1,4 +1,5 @@
 # distutils: language = c++
+# distutils: extra_compile_args = -std=c++20
 
 from optimizer cimport SolveFailsafe
 

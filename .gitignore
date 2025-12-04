@@ -8,3 +8,4 @@ dist
 drawtetrado.egg-info
 src/drawtetrado.egg-info
 text_width.svg
+.venv

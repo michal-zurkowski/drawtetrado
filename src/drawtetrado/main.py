@@ -9,8 +9,8 @@ from typing import IO
 import orjson
 from eltetrado.analysis import eltetrado
 from eltetrado.dto import generate_dto
-from rnapolis.annotator import extract_secondary_structure
-from rnapolis.parser import read_3d_structure
+import rnapolis.parser
+from rnapolis.adapter import ExternalTool
 
 import drawtetrado.structure as structure
 import drawtetrado.svg_painter as svg_painter
@@ -106,21 +106,24 @@ def main():
             default=None)
     # ElTetrado options.
     parser.add_argument('-m', '--model', help='(optional, ElTetrado) model number to process', default=1, type=int)
-    parser.add_argument('--stacking-mismatch',
-                        help='(optional, ElTetrado) a perfect tetrad stacking covers 4 nucleotides; this option can be used with values 1 or '
-                             '2 to allow this number of nucleotides to be non-stacked with otherwise well aligned '
-                             'tetrad [default=2]',
-                        default=2,
-                        type=int)
-    parser.add_argument('--strict',
-                        action='store_true',
-                        help='(optional, ElTetrado) nucleotides in tetrad are found when linked only by cWH pairing')
     parser.add_argument('--no-reorder',
                         action='store_true',
                         help='(optional, ElTetrado) chains of bi- and tetramolecular quadruplexes should be reordered to be able to have '
                              'them classified; when this is set, chains will be processed in original order, which for '
                              'bi-/tetramolecular means that they will likely be misclassified; use with care!')
 
+    parser.add_argument(
+        "-e",
+        "--external-files",
+        nargs="*",
+        default=[],
+        help="(optional, ElTetrado) path(s) to external tool output file(s); if omitted ElTetrado will compute interactions itself",
+    )
+    parser.add_argument(
+        "--tool",
+        choices=[t.value for t in ExternalTool],
+        help="(optional, ElTetrado) name of the external tool that produced the files (auto-detected when not provided)",
+    )
     args = parser.parse_args()
 
     config = svg_painter.Config(1.0, args.config)
@@ -137,10 +140,37 @@ def main():
             DrawFromFile(args.input, args.output_template, config)
     else:
         cif_or_pdb = handle_input_file(args.input)
-        structure3d = read_3d_structure(cif_or_pdb, args.model)
-        structure2d = extract_secondary_structure(structure3d, args.model)
-        analysis = eltetrado(structure2d, structure3d, args.strict, args.no_reorder, args.stacking_mismatch)
+        structure3d = rnapolis.parser.read_3d_structure(
+            cif_or_pdb, args.model, nucleic_acid_only=False
+        )
+
+        external_files: List[str] = args.external_files
+        selected_tool: Optional[ExternalTool] = (
+            ExternalTool(args.tool) if args.tool else None
+        )
+
+        if selected_tool is None and external_files:
+            selected_tool = auto_detect_tool(external_files)
+            logging.info(f"Auto-detected external tool: {selected_tool.value}")
+
+        if selected_tool:
+            if not external_files and selected_tool == ExternalTool.MAXIT:
+                external_files = [args.input]
+            base_interactions = parse_external_output(
+                external_files, selected_tool, structure3d
+            )
+        else:
+            base_interactions = rnapolis.annotator.extract_base_interactions(
+                structure3d, args.model
+            )
+
+        analysis = eltetrado(
+            base_interactions,
+            structure3d,
+            args.no_reorder,
+        )
         dto = generate_dto(analysis)
+
         if  not args.output_template:
             DrawFromString(orjson.dumps(dto), root, config)
         else:

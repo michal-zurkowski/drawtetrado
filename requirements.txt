@@ -1,4 +1,4 @@
 pycairo
 svgwrite
 orjson
-eltetrado>=1.5
+eltetrado>=1.7

@@ -7,7 +7,7 @@ from Cython.Build import cythonize
 with open('README.md') as f:
     long_description = f.read()
 
-os.environ['CFLAGS'] = '-std=c++2a'
+os.environ['CFLAGS'] = '-std=c++20'
 
 setup(name = "drawtetrado",
       version = "1.5.0",
@@ -33,7 +33,8 @@ setup(name = "drawtetrado",
       ],
       ext_modules = cythonize(["cython/optimizer.pyx"]),
       entry_points = {'console_scripts': ['drawtetrado=drawtetrado.main:main']},
+      python_requires = '>3.12',
       install_requires = [
-          'pycairo', 'svgwrite', 'orjson', 'eltetrado'
+          'pycairo', 'svgwrite', 'orjson', 'eltetrado>=1.7.0', 'rnapolis'
       ]
 )
