@@ -10,7 +10,7 @@ with open('README.md') as f:
 os.environ['CFLAGS'] = '-std=c++20'
 
 setup(name = "drawtetrado",
-      version = "1.5.0",
+      version = "1.6.0",
       packages = ['drawtetrado'],
       package_dir = {'': 'src'},
       author = "Michal Zurkowski",
